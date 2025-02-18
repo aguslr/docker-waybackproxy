@@ -1,0 +1,12 @@
+version: '2.4'
+
+services:
+  proxy:
+    container_name: waybackproxy
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      - SETTINGS_PAGE=true
+    ports:
+      - 8888:8888/tcp
