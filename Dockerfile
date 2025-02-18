@@ -27,7 +27,4 @@ EOT
 
 EXPOSE 8888
 
-HEALTHCHECK --interval=1m --timeout=3s \
-  CMD timeout 2 bash -c 'cat < /dev/null > /dev/tcp/127.0.0.1/8888'
-
 CMD [ "sh", "/app/startup.sh" ]
